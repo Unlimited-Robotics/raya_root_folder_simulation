@@ -32,9 +32,9 @@ UR_ROOT_PATH=${UR_SIM_PATH}/ur_root
 # Volumes to blind inside container
 SYS_VOL=(
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro
-    -v /etc/alsa:/etc/alsa
-    -v /usr/share/alsa:/usr/share/alsa
     -v /var/run/pulse/native:/var/run/pulse/native
+    -v /run/user/$UID/pulse:/run/user/1000/pulse
+    -v $HOME/.config/pulse/cookie:/root/.config/pulse/cookie
     -v /var/run/dbus:/var/run/dbus 
     -v ${XAUTHORITY}:/root/.Xauthority
 )
@@ -45,7 +45,8 @@ PORTS=(--network host)
 ENV_VAR=(
     -e DISPLAY=$DISPLAY
     -e QT_X11_NO_MITSHM=1
-    -e PULSE_SERVER=unix:/run/user/$UID/pulse/native
+    -e PULSE_SERVER=unix:/run/user/1000/pulse/native
+    -e PULSE_COOKIE=/root/.config/pulse/cookie
     -e MOZ_WEBRENDER=0
     -e MOZ_ACCELERATED=0
 )
