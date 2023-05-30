@@ -37,6 +37,7 @@ SYS_VOL=(
     -v $HOME/.config/pulse/cookie:/root/.config/pulse/cookie
     -v /var/run/dbus:/var/run/dbus 
     -v ${XAUTHORITY}:/root/.Xauthority
+    -v ${UR_ROOT_PATH}/rayadevel_ssh:/opt/raya_os/rayadevel/.ssh
 )
 
 PORTS=(--network host)
@@ -53,12 +54,12 @@ ENV_VAR=(
 
 RAYA_VOL+=(
     -v ${UR_ROOT_PATH}/config:/opt/raya_os/config:ro
-    -v ${UR_SIM_PATH}/apps:/opt/raya_os/rayadevel/apps:ro
     -v ${UR_SIM_PATH}/apps:/opt/raya_os/apps
     -v ${UR_ROOT_PATH}/data:/opt/raya_os/data
     -v ${UR_ROOT_PATH}/notebooks:/opt/raya_os/notebooks
-    -v ${UR_SIM_PATH}/data_apps:/opt/raya_os/data_apps
-    -v ${UR_SIM_PATH}/data_apps_devel:/opt/raya_os/data_apps_devel
+    -v ${UR_SIM_PATH}/apps:/opt/raya_os/rayadevel/apps
+    -v ${UR_SIM_PATH}/data_apps:/opt/raya_os/data_apps_filesystem
+    -v ${UR_SIM_PATH}/data_apps_devel:/opt/raya_os/data_apps_devel_filesystem
 )
 
 docker run -it \
