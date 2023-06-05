@@ -4,4 +4,4 @@
 *.pem
 /rayadevel_ssh/*
 !/rayadevel_ssh/.gitkeep
-
+!/rayadevel_ssh/environment
