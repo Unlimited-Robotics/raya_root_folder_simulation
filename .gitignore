@@ -1,6 +1,10 @@
 .ipynb_checkpoints
 /data/models/*
 !/data/models/.gitkeep
+!/data/models/apriltags
+!/data/models/cnn_face
+!/data/models/deepknn_face
+!/data/models/yunet_face
 *.pem
 /rayadevel_ssh/*
 !/rayadevel_ssh/.gitkeep
