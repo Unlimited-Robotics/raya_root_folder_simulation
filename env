@@ -1,14 +1,38 @@
+#######################
+####### GENERAL #######
+#######################
+
 ROBOT_SERIAL=RAYA_SIMULATOR
 ROBOT_ID=RAYA_SIMULATOR
 CLIENT_ID=CLIENT_ID
 
+#####################
+####### RA-YA #######
+#####################
+
 RAYA_CONFIG_PKG=gary_unity
 RAYA_CONFIG_NAME=gary_unity
 
-INITIAL_MAP=unity_apartment
+#### DEBUG ####
+# ETHERNET_ROS=Any
+# RAYA_IGNORE_APP_TOKEN=False
 
-ENABLE_BROWSER=True
+#### WEB ####
+LOCAL_CHEST=true
+ENABLE_BROWSER=true
 BROWSER_URL="localhost:3000/app/"
 
+#### DEFAULT APP ####
+# ENABLE_DEFAULT_APP=false
+# DEFAULT_APP=connection
+
+###############################
+####### RA-YA SIMULATOR #######
+###############################
+
+#### NAVIGATION ####
+INITIAL_MAP=unity_apartment
+
+#### CAMERAS ####
 CAMERAS_STREAMING_SERVER_PORT=8802
 CAMERAS_STREAMING_SERVER_IP=127.0.0.1
