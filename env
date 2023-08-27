@@ -15,12 +15,12 @@ RAYA_CONFIG_NAME=gary_unity
 
 #### DEBUG ####
 # ETHERNET_ROS=Any
-# RAYA_IGNORE_APP_TOKEN=False
+RAYA_IGNORE_APP_TOKEN=true
 
 #### WEB ####
-LOCAL_CHEST=true
-ENABLE_BROWSER=true
-BROWSER_URL="localhost:3000/app/"
+LOCAL_CHEST=false
+ENABLE_BROWSER=false
+# BROWSER_URL="localhost:3000/app/"
 
 #### DEFAULT APP ####
 # ENABLE_DEFAULT_APP=false
@@ -32,6 +32,12 @@ BROWSER_URL="localhost:3000/app/"
 
 #### NAVIGATION ####
 INITIAL_MAP=unity_apartment
+
+#### ARMS ####
+GARY_ARMS_ENABLE=false
+
+#### MANUPULATION ####
+GARY_MANIPULATION_ENABLE=false
 
 #### CAMERAS ####
 CAMERAS_STREAMING_SERVER_PORT=8802
